@@ -29,7 +29,7 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   (req, res) => {
     res.cookie("jwt", req.user, JwtConfig)
-    return res.redirect(CLIENT_URL)
+    return res.redirect('/')
   }
 )
 
